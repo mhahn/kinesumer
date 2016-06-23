@@ -4,10 +4,10 @@ checkout:
     - mkdir -p ~/.go_workspace/src/github.com/remind101
     - cp -R ~/kinesumer ~/.go_workspace/src/github.com/remind101/kinesumer
 
-
 dependencies:
   override:
     - go get github.com/tools/godep
+    - cd ~/.go_workspace/src/github.com/remind101/kinesumer
     - godep go install github.com/remind101/kinesumer/...
 
 test:
